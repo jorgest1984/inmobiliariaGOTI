@@ -6,8 +6,14 @@ import { Label } from '@/components/ui/label'
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { Building2 } from 'lucide-react'
+import { useState } from 'react' // Added useState import
 
-export default function LoginPage() {
+export default function LoginPage({
+    searchParams,
+}: {
+    searchParams: { error?: string }
+}) {
+    const [isLoading, setIsLoading] = useState(false)
     return (
         <div className="flex min-h-screen items-center justify-center bg-gray-50 dark:bg-gray-900 p-4">
             <div className="w-full max-w-md">
@@ -33,19 +39,26 @@ export default function LoginPage() {
                                     Ingresa tus credenciales para acceder a tu cuenta.
                                 </CardDescription>
                             </CardHeader>
-                            <form>
+                            <form onSubmit={() => setIsLoading(true)}>
                                 <CardContent className="space-y-4">
+                                    {searchParams.error && (
+                                        <div className="p-3 text-sm text-red-500 bg-red-50 border border-red-200 rounded-md">
+                                            Error: {searchParams.error}
+                                        </div>
+                                    )}
                                     <div className="space-y-2">
                                         <Label htmlFor="email">Correo Electrónico</Label>
-                                        <Input id="email" name="email" type="email" placeholder="nombre@ejemplo.com" required />
+                                        <Input id="email" name="email" type="email" placeholder="tu@email.com" required />
                                     </div>
                                     <div className="space-y-2">
                                         <Label htmlFor="password">Contraseña</Label>
                                         <Input id="password" name="password" type="password" required />
                                     </div>
                                 </CardContent>
-                                <CardFooter>
-                                    <Button formAction={login} className="w-full">Entrar</Button>
+                                <CardFooter> {/* Re-added CardFooter to maintain structure */}
+                                    <Button formAction={login} type="submit" disabled={isLoading} className="w-full">
+                                        {isLoading ? 'Iniciando sesión...' : 'Entrar'}
+                                    </Button>
                                 </CardFooter>
                             </form>
                         </Card>
