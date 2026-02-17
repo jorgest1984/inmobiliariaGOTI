@@ -57,8 +57,10 @@ export default function TenantIncidents() {
                                     Reportado el {incident.date} • ID: {incident.id}
                                 </CardDescription>
                             </div>
-                            <Button variant="ghost" size="sm">
-                                <MessageSquare className="mr-2 h-4 w-4" /> Chat
+                            <Button variant="ghost" size="sm" asChild>
+                                <Link href="/tenant/chat">
+                                    <MessageSquare className="mr-2 h-4 w-4" /> Chat
+                                </Link>
                             </Button>
                         </CardHeader>
                         <CardContent>
