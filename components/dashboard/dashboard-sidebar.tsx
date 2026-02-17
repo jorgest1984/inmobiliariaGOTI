@@ -4,7 +4,7 @@
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { cn } from '@/lib/utils'
-import { LayoutDashboard, FileText, AlertCircle, Home, LogOut } from 'lucide-react'
+import { LayoutDashboard, FileText, AlertCircle, Home, LogOut, MessageSquare } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { signout } from '@/app/(auth)/actions'
 
@@ -26,6 +26,12 @@ const routes = [
         icon: AlertCircle,
         href: '/tenant/incidents',
         color: 'text-pink-700',
+    },
+    {
+        label: 'Mensajes',
+        icon: MessageSquare,
+        href: '/tenant/chat',
+        color: 'text-green-700',
     },
     {
         label: 'Mi Vivienda',
