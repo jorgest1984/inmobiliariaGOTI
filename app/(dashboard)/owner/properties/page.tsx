@@ -11,7 +11,7 @@ export default function OwnerProperties() {
             id: "1",
             address: "Calle Gran Vía 12, 4º Derecha",
             city: "Madrid, 28013",
-            image: "https://placehold.co/800x400/2a2a2a/FFF?text=Gran+Via",
+            image: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=2070&auto=format&fit=crop",
             status: "rented",
             rent: 1200,
             tenant: "Juan Pérez"
@@ -20,7 +20,7 @@ export default function OwnerProperties() {
             id: "2",
             address: "Av. de la Paz 45",
             city: "Pozuelo, 28223",
-            image: "https://placehold.co/800x400/2a2a2a/FFF?text=Pozuelo",
+            image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=2070&auto=format&fit=crop",
             status: "rented",
             rent: 1200,
             tenant: "María López"
@@ -29,7 +29,7 @@ export default function OwnerProperties() {
             id: "3",
             address: "Calle Pez 8",
             city: "Madrid, 28004",
-            image: "https://placehold.co/800x400/2a2a2a/FFF?text=Malasana",
+            image: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=2080&auto=format&fit=crop",
             status: "vacant",
             rent: 950,
             tenant: "-"

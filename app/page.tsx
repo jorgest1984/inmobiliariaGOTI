@@ -9,37 +9,37 @@ import { Search } from 'lucide-react'
 export default function Home() {
   const featuredProperties = [
     {
-      id: "1",
+      id: 1,
       title: "Apartamento de Lujo en el Centro",
-      address: "Calle Gran Vía 12, Madrid",
+      type: "rent" as const,
       price: 1200,
-      image: "https://placehold.co/600x400/2a2a2a/FFF?text=Luxury+Apartment",
+      address: "Calle Gran Vía 12, Madrid",
       beds: 2,
       baths: 2,
       sqft: 95,
-      type: "rent" as const
+      image: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=2070&auto=format&fit=crop",
     },
     {
-      id: "2",
+      id: 2,
       title: "Chalet Familiar con Jardín",
-      address: "Av. de la Paz 45, Pozuelo",
+      type: "sale" as const,
       price: 450000,
-      image: "https://placehold.co/600x400/2a2a2a/FFF?text=Family+House",
+      address: "Av. de la Paz 45, Pozuelo",
       beds: 4,
       baths: 3,
       sqft: 250,
-      type: "sale" as const
+      image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=2070&auto=format&fit=crop",
     },
     {
-      id: "3",
+      id: 3,
       title: "Loft Moderno en Zona Artística",
-      address: "Calle Pez 8, Madrid",
+      type: "rent" as const,
       price: 950,
-      image: "https://placehold.co/600x400/2a2a2a/FFF?text=Modern+Loft",
+      address: "Calle Pez 8, Madrid",
       beds: 1,
       baths: 1,
       sqft: 60,
-      type: "rent" as const
+      image: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=2080&auto=format&fit=crop",
     }
   ]
 
@@ -51,7 +51,7 @@ export default function Home() {
         <section className="relative h-[600px] flex items-center justify-center bg-gray-900 text-white overflow-hidden">
           {/* Abstract Background */}
           <div className="absolute inset-0 z-0 bg-gradient-to-r from-blue-900 via-purple-900 to-gray-900 opacity-90" />
-          <div className="absolute inset-0 z-0 opacity-20 bg-[url('https://placehold.co/1920x1080/000000/FFFFFF?text=City+Silhouette')] bg-cover bg-center" />
+          <div className="absolute inset-0 z-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=2070&auto=format&fit=crop')] bg-cover bg-center" />
 
           <div className="relative z-10 container flex flex-col items-center text-center space-y-6 px-4">
             <h1 className="text-4xl md:text-6xl font-bold tracking-tighter">
@@ -87,7 +87,7 @@ export default function Home() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
               {featuredProperties.map((property) => (
-                <PropertyCard key={property.id} {...property} />
+                <PropertyCard key={property.id} {...property} id={property.id.toString()} />
               ))}
             </div>
 

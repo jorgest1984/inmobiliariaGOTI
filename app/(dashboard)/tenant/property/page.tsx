@@ -9,7 +9,7 @@ export default function TenantProperty() {
     const property = {
         address: "Calle Gran Vía 12, 4º Derecha",
         city: "Madrid, 28013",
-        image: "https://placehold.co/800x400/2a2a2a/FFF?text=Mi+Vivienda",
+        image: "https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=2070&auto=format&fit=crop",
         contractStart: "01/02/2026",
         contractEnd: "31/01/2027",
         rent: 1200,

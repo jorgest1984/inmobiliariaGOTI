@@ -26,7 +26,7 @@ export default function PropertiesPage() {
             title: "Chalet Familiar con Jardín",
             address: "Av. de la Paz 45, Pozuelo",
             price: 450000,
-            image: "https://placehold.co/600x400/2a2a2a/FFF?text=Family+House",
+            image: "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?q=80&w=2070&auto=format&fit=crop", // House with garden
             beds: 4,
             baths: 3,
             sqft: 250,
@@ -37,7 +37,7 @@ export default function PropertiesPage() {
             title: "Loft Moderno en Zona Artística",
             address: "Calle Pez 8, Madrid",
             price: 950,
-            image: "https://placehold.co/600x400/2a2a2a/FFF?text=Modern+Loft",
+            image: "https://images.unsplash.com/photo-1502672260266-1c1ef2d93688?q=80&w=2080&auto=format&fit=crop", // Loft interior
             beds: 1,
             baths: 1,
             sqft: 60,
@@ -48,7 +48,7 @@ export default function PropertiesPage() {
             title: "Ático con Terraza",
             address: "Paseo de la Castellana 200, Madrid",
             price: 1800,
-            image: "https://placehold.co/600x400/2a2a2a/FFF?text=Penthouse",
+            image: "https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2070&auto=format&fit=crop", // Penthouse/Terrace
             beds: 3,
             baths: 2,
             sqft: 120,
